@@ -1,0 +1,90 @@
+<html>
+    <head>
+            <title>Welcome to HTML Table</title>
+    </head>
+    <style>
+        table, th , td{
+            border: 2px solid red;
+            border-collapse : collapse;
+            padding : 15px;
+           
+        }
+        th{
+            text-align: left;
+            color:blue;
+            background-color:lightseagreen;
+        }
+        table{
+            border-spacing: 5px;
+        }
+        /* # is used for detecting id of any html  */ 
+        #tableExample{
+            width: 100%;
+            background-color: bisque;
+        }
+        #tableExample tr:nth-child(even){
+            background-color: lightskyblue;
+        }
+        #tableExample tr:nth-child(odd){
+            background-color: lightcoral;
+        }
+    </style>
+    <body>
+        <table style="width:100%" id="tableExample">
+            <!--
+                tr - table row 
+                th - header 
+                td - elements  - data
+
+            -->
+            <caption>Employee Details</caption>
+            <tr>
+                <!-- <th  colspan="2">Name</th> -->
+                <th colspan="2">Name</th>
+                <th>Designation</th>
+            </tr>
+            <tr>
+                <td>Jeff</td>
+                <td>Martin</td>
+                <td>2000 USD</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Stella</td>
+                <td>2500 USD</td>
+            </tr>
+            <tr>
+                <td>Andy</td>
+                <td>Mark</td>
+                <td>2200 USD</td>
+            </tr>
+            <tr>
+                <td>Sandy</td>
+                <td>Sheryl</td>
+                <td>2200 USD</td>
+            </tr>
+        </table>
+
+        <hr/>
+        <label>RowSpan :</label><br/>
+        <table style="width:100%">
+            <!--
+                tr - table row 
+                th - header 
+                td - elements  - data
+
+            -->
+            <tr>
+                <th>Name :</th>
+                <td>Bill</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone</th>
+                <td>087979</td>
+            </tr>
+            <tr>
+                <td>080 - 909090</td>
+            </tr>
+        </table>
+    </body>
+</html>
