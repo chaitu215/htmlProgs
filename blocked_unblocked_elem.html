@@ -1,8 +1,43 @@
 <html>
     <head>
             <title>Welcome to HTML Blocked and Unblocked</title>
+            <style>
+                .blockedDiv{
+                    background-color: aliceblue;
+                    border: "2px solid red";
+                    float:left;
+                    width: 50%;
+                    height:30px;
+                }
+                .blockedDiv2{
+                    background-color: white;
+                    border: "2px solid red";
+                    width: 50%;
+                    height:60px;
+                }
+            </style>
     </head>
     <body>
+        <!-- blocked Elements div , aside, article , address, blockquote , canvas
+        fieldset , h1 to h6 , header , nav , p , table , ul , li  , ol 
+            no script , section , video , hr 
+        They will start new line and occpies entire width -->
+        <div class="blockedDiv">
 
+        </div>
+        <hr/>
+        <div class="blockedDiv2">
+
+        </div>
+
+        <!-- 
+            Inline Elements - a , abbr , b , bdo , code , em , cite , 
+            img , var , small , time , strong , select , i , label , sub, sup 
+            , textarea , script , span , button 
+        -->
+        <div class="blockedDiv2">
+                <label>Name: </label>
+                <input type="text"/>
+        </div>
     </body>
 </html>
