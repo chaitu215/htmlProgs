@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <input type="text"/>
+        <input type="radio"/>
+        <input type="number"/> -->
+        <form action="/jsfile" method="post">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <!--- select tag -->
+            <!-- <select id = "cars" name="cars" size="2"> -->
+                <select id = "cars" name="cars" >
+                <option value="volvo" >Volvo</option>
+                <option value="Audi" >Audi</option>
+            </select>
+            <textarea name="letter" rows="10" cols="40">
+                We want to go a head with your bussiness proposal 
+            </textarea>
+            <br/>
+            <fieldset>
+                <legend>Personal</legend>
+                <label for="fname">First Name</label> <br/>
+                <input type="text" id="fname" name = "fname" value="jhon"/><br>
+                <label for="lname">Last Name</label> <br/>
+                <input type="text" id="lname" name = "lname" placeholder="Last Name"/>
+                <label for="lname">Last Name</label> <br/>
+                <input type="text" id="lname" name = "lname" value="joe" disabled/>
+                <label for="lname">Last Name</label> <br/>
+                <input type="text" id="lname" name = "lname" value="joe" maxlength="6"/>
+                <input type="number" id="qty" name = "qty" min="3" max="6" placeholder="Qty" size="5"/>
+            </fieldset>
+
+            <input list="browsers" name="browser"/>
+            <datalist id="browsers">
+                <option value="Mozilla"></option>
+                <option value="Chrome"></option>
+            </datalist>
+
+            
+            <hr/>
+
+            <input type="submit" value="Submit"/>
+            <button type="button" onclick="alert('helloWorld')">click me </button>
+        </form>
+    </body>
+</html>

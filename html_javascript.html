@@ -13,47 +13,34 @@
             color: black;
             border-radius: 10px;
         }
-        .demo{
+        .democlass{
             color: red;
-            font-size: 10px;
-            visibility: hidden;
+            font-size: 30px;
         }
 
-        .demo1{
+        .demo1class{
             color: blue;
-            font-size: 10px;
-            visibility: visible;
+            font-size: 30px;
+           
         }
-
-
-        
-
     </style>
     <script>
+      
         function displayData(){
-         
-            var switchButton = true
-            if(switchButton){
-                document.getElementById('demo').style.visibility = "hidden"
-                document.getElementById('demo1').style.visibility = "visible"
-                document.getElementById('demo').innerHTML = "demo"
-                document.getElementById('demo1').innerHTML = "demo1"
-                console.log(switchButton)
-         
-                switchButton = false
-            }else{
-                document.getElementById('demo').innerHTML = "demo2"
-                console.log(switchButton)
-                document.getElementById('demo').style.visibility = visible
-                document.getElementById('demo1').style.visibility = hidden
-            }
-        }
+           
+               var boolVal = true
+               var boolcheck = document.getElementById('demo')
+               //var boolcheck2 = document.getElementById('demo1')
+               boolcheck.className = "democlass"
+               //boolcheck2.className= "demo1class"
+             //
+             }
     </script>
     <body>
             <div class="street">
                 <button onclick="displayData()">clickMe</button>
-                <p id= "demo"> </p>
-                <p id= "demo1"></p>
+                <p  id="demo">html</p>
+            
             </div>
     </body>
 </html>
