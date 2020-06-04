@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Ram"/>
+    </head>
+    <body>
+        <canvas id="mycanvas" width="200" height="100"
+        style="border: 1px solid black "></canvas>
+        <canvas id="mycanvasrect" width="200" height="100"
+        style="border: 1px solid black "></canvas>
+        <canvas id="circle" width="200" height="100"
+        style="border: 1px solid black "></canvas>
+
+        <canvas id="box" width="200" height="100"
+        style="border: 1px solid black "></canvas><br/>
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r= "40" stroke="green" stroke-width="4" fill="blue"/>
+        </svg>
+
+        <svg width="400" height="200">  
+            <rect x= "50" y ="20" rx="20" ry="20" width="150" height="150"
+                style="fill:red;stroke: black;stroke-width: 5px;opacity: 0.5;"/>
+        </svg>  
+
+        <video width="320" height="300" controls>
+            <source src="./example.mp4" type="video/mp4">
+        </video>
+
+        <audio controls>
+            <source source="" type="audio/mpeg"/>
+        </audio>
+
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+
+        </iframe>
+
+        <script>
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d")
+            ctx.moveTo(0,0)
+            ctx.lineTo(200,100)
+            ctx.stroke()
+
+            var circle = document.getElementById("circle");
+            var circleCtx= circle.getContext("2d")
+            circleCtx.beginPath()
+            circleCtx.arc(95, 50 , 40,0, 2 * Math.PI)
+            circleCtx.stroke()
+
+            var canvasBox =document.getElementById("box")
+            var boxCtx = canvasBox.getContext("2d")
+            boxCtx.font="30px Arial";
+            boxCtx.fillText("Hello World", 10, 50)
+        </script>
+    </body>
+</html>
