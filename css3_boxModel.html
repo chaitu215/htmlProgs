@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2> Box Model </h2>
+    <style>
+        div {
+            background-color: aquamarine;
+            width: 300px;
+            height: 300px;
+            border: 15px solid green;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            outline-style: double;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+            /*text-decoration: line-through; */
+            letter-spacing: 3px;
+            line-height: 10px;
+            white-space: normal;
+            text-shadow: 2px 2px red; /* horizontal shadow and vertical shadow and color */
+        }
+
+        h1{
+            color: brown;
+            text-align: center;
+        }
+    </style>        
+    </head>
+    <body>
+        <h1> Box Model page </h1>
+        <div>
+
+         
+            India is in Asia <br/>
+            USA is in North America <br/>
+            Chile is in South America <br/>
+            
+            calculation of width of element : width + left padding + right padding + left border +
+                              right border + left margin + right marigin 
+                              = 300 + 40 + 40 + 15 + 15+ 20 + 20 
+                              <br/>
+                
+            calculation of height of element : margin top + top border +
+                                               padding top + height +
+                                               padding bottom + border bottom +
+                                               margin bottom  <br/>
+                                    
+            <p> New Delhi is capital of India </p>
+
+        </div>
+    </body>
+</html>
+
+3 divs , align horizontal with float : left and right , 
+each div should have box model params ( top , bottom , left  , right )
+letter spacing inside div and text shadow . 
