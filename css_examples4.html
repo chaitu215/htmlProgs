@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .relativeClass{
+                position: relative;
+                width: 400px;
+                height: 200px;
+                border: 3px solid tomato;
+            }
+
+            .absoluteClass{
+                position: absolute;
+                top: 100px;
+                right : 10px;
+                width:200px;
+                height: 80px;
+                border: 3px solid lightgreen;
+            }
+
+            .stickyClass{
+                position: sticky;
+                top: 0;
+                padding: 5px;
+                background-color: lightskyblue;
+            }
+
+            .zindexClass{
+                position: absolute;
+                top: 20px;
+                left: 0px;
+                z-index: -1;
+            }
+
+            .fixedClass{
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                width: 300px;
+                border: 3px solid tomato;
+            }
+            
+            input[type=text]{
+                width: 70%;
+                padding: 12px;
+                margin: 8px;
+                border-radius: 15px;
+                border: 5px solid lightgreen
+            }
+
+            .hoverClass{
+                background-color: green;
+                color: black;
+                padding:5px;
+                margin: 5px;
+                text-align: center;
+            }
+
+            .hoverClass:hover{ /*hover is a  pseudo class */
+                background-color: blueviolet;
+            }
+
+            p:first-child{
+                color:brown;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="stickyClass">Absolute</div>
+        <p>Absolute : is positioned relative to the 
+            nearest positioned anscestor 
+        </p>
+        <p> I am second para in the page 
+        </p>
+
+        <div class="relativeClass">
+            Tokyo is in Japan 
+            <div class="absoluteClass">
+                Japan is in Asia
+            </div>
+        </div>
+
+        <div class="relativeClass">
+            Tokyo is in Japan 
+            <div class="absoluteClass">
+                Japan is in Asia
+            </div>
+        </div>
+
+        <div class="relativeClass">
+            Tokyo is in Japan 
+            <div class="absoluteClass">
+                Japan is in Asia
+            </div>
+        </div>
+
+        <div class="fixedClass">
+            <p>I am in fixed postion </p>
+        </div>
+
+        <div class="zindexClass">
+            <p>zindex is used to specify order of an element
+                which can be placed infont or behind the text 
+            </p>
+        </div>
+
+        <!-- form related css-->
+        <br/>
+        <label>form Example : </label>
+        <br/>
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname">
+        </form>
+        <br/>
+        <div class="hoverClass">
+            Mouse over the div element to change background color
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <!-- Assignment : 4 divs totally 
+
+1) make a div with position as fixed , that should be on top of page 
+2) make a 2 div one on top of other with - position absoulte and relative 
+3) take one more with postion sticky - place a form inside this div and 
+    give styles for the input type text .  -->
+    </body>
+</html>
+
+
