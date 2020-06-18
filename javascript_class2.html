@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>welcome class 2 </title>
+    </head>
+    <body>
+            <script>
+                function dataTypes(){
+                    var x = 5  // numeric
+                var lastName= "joe" // string 
+                var obj = {firstName: "Jhon" , lastName: "joe"} // Object
+                var z  // undefined
+                var dec = 34.35  // decimal
+                var x2 = 34 // without decimal
+                var exp = 123e5 // 123 * 100000 = 12300000
+                var booleanValue = true
+                var nullVal = null
+                var arrVal= ["chennai", "bengaluru", "hyderabad"]
+                console.log("exp",exp);
+                //console.log("undefined variable ", t);
+                console.log("object", obj);
+                console.log("lastname", lastName);
+                console.log("x numeric", x);
+                console.log("booleanValue", booleanValue)
+                console.log("array", arrVal)
+                console.log("nullVal", nullVal )
+                // type of parameter
+                console.log(typeof booleanValue);
+                console.log(typeof lastName)
+                console.log(typeof x)
+                console.log(typeof dec)
+                console.log(typeof obj)
+                console.log(typeof arrVal)
+                console.log(typeof nullVal) // object
+                console.log(typeof undefined) // undefined
+                console.log(typeof function add(){ return {empno : "201"}}) // function 
+                }
+               
+                // primitive data types :
+                    // string , number , boolean , undefined
+
+                function add(a , b ){
+                    return a + b
+                }
+                var result = add(3, 4)
+                var result2 = add(3, 7)
+                console.log("result add function", result )
+                console.log("result add function", result2)
+
+                // object 
+                var objExample = {
+                    firstName: "jhon",
+                    lastName : "joe",
+                    empid: "215",
+                    eno: "101",
+                    marks : { english : 70 , Telugu : 80 },
+                    stats : [1.2 , 1.6 , 2.15 , 2.2] , 
+                    studiedyears : function(){
+                        year1 = 1990
+                        year2 = 1991
+                        return year1 + " "+ year2
+                    } , 
+                    fullname: function(){
+                         return this.firstName + " "+ this.lastName
+                    }
+                }
+                console.log(objExample["firstName"])
+                console.log(objExample.firstName)
+                console.log(objExample.marks.english)
+                console.log(objExample.stats)
+                console.log(objExample.studiedyears())
+                console.log(objExample.fullname())
+            </script>
+
+            <button onclick="dataTypes()" >Data types</button>
+
+
+    </body>
+</html>
