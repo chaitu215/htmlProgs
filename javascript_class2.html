@@ -70,10 +70,203 @@
                 console.log(objExample.stats)
                 console.log(objExample.studiedyears())
                 console.log(objExample.fullname())
+
+                // string methods
+                var str = "Bengaluru is in karnataka in india Bengaluru"
+                var str2 = "       speaks Kanada"
+                var splitString = "a,b, c, d" 
+                console.log("length",str.length) // 25
+                console.log("position ",str.indexOf("in")) // 13
+                console.log("lastIndexof",str.lastIndexOf("in"))
+                console.log("position", str.indexOf("in",13))
+                console.log("search" , str.search("B"))
+                console.log("test", str.slice(1,2))
+                console.log("slice", str.slice(2,6)) // start , end
+                console.log("negative slice", str.slice(0,-4))
+                console.log("negative slice", str.slice(-6,-1));
+                console.log("slice single", str.slice(5) )
+                console.log("substring", str.substr(1,5))
+                console.log("substr single", str.substr(-4))
+                console.log("replace", str.replace("Bengaluru", "Kolar")) // single occurence
+                console.log("replace", str.replace(/Bengaluru/g, "Kolar")) // mutiple occurence
+                console.log("touppercase", str.toUpperCase())
+                console.log("tolowercase",str.toLowerCase())
+                console.log("concat", str.concat(" ", str2))
+                console.log("trim", str2.trim())
+                console.log("str[0]", str[0])
+                console.log("split", splitString.split(",",3))
+                // Array Methods
+                var arrVariable = []
+                arrVariable = [1 ,2,3,4,5]
+                console.log("arrVariable numeric", arrVariable)
+                arrVariable = ["Bengaluru" ,"Tokyo" , "Singapore" ]
+                console.log("arrVariable", arrVariable)
+               // arrVariable = ["Bengaluru", 101] // not recomended
+               // console.log("arrVariable", arrVariable)
+                console.log("pop", arrVariable.pop()) // pop will return last element of an Array 
+                arrVariable = ["Bengaluru" ,"Tokyo" , "Singapore" ]
+                arrResult = arrVariable.push("New Jersy")
+                console.log(arrVariable)
+                console.log(arrVariable.shift()) // return the first element of array 
+                arrVariable.unshift("California") // add element to the first of array 
+                console.log("unshift adds element in first index", arrVariable)
+                console.log("length", arrVariable.length)
+                delete arrVariable[0]
+                console.log("delete element", arrVariable)
+                arrVariable.splice(2,1 ,"London", "Frankfurt") // first value is index , second value is element to remove from the first as index
+                console.log("splice based on index",arrVariable)
+                arrVariable.splice(0,1)
+                console.log("splice first element", arrVariable)
+                //console.log("push" , arrVariable.push("New York"))
+                //console.log(arrVariable)
+               var arrCities = ["Moracco" , "Berlin" , "Barcelona"]
+              var mergedArr = arrVariable.concat(arrCities)
+             
+              console.log("concat ", mergedArr)
+              var arrCities = ["Moracco" , "Berlin" , "Barcelona"]
+             
+              console.log( arrCities.slice(3)) // slices based on the length 
+              console.log(arrCities)
+              arrCities.toString()
+              //console.log()
+              console.log("sort",arrCities.sort())
+              console.log("reverse",arrCities.reverse())
+              var marks = [ 45, 55, 80, 65 , 96]
+             
+             console.log("marks",  marks.sort())
+             var marksResult =  marks.sort(function(a,b){ return a-b})
+             console.log(marksResult)
+             var objectArrayCities = [
+                 {"city": "Hyderabad" , "rank":1},
+                 {"city": "Bengaluru" , "rank":20},
+                 {"city": "Belgaum" , "rank":15},
+                 {"city": "Bengaluru" , "rank":1},
+                 {"city": "Vijayawada" , "rank":70}
+             ]
+             console.log(objectArrayCities.sort())
+
+             var objResult = objectArrayCities.sort(
+                    function(a,b)
+                        { 
+                                return a.rank -b.rank
+                        }
+                        )
+             console.log(objResult)
+             var citiesArr = []
+             for(let i = 0 ; i <objResult.length ; i ++) {
+                 if(  objResult[i].city === "Bengaluru"){
+                    console.log("iterated value" , objResult[i])
+                    citiesArr.push(objResult[i])
+                    console.log(citiesArr)
+                 }
+             }
+             for(let i in objResult){
+                 console.log(objResult[i].city)
+             }
+             // Dates
+             var dateObj = [  
+                              {dateval : "2011-03-03"},
+                              {dateval : "2013-03-03"},
+                              {dateval : "2015-03-03"},
+                            ]
+            dateObjexp = [
+                            {dateval: "Wed Mar 03 2011 00:00:00 GMT+0530 (India Standard Time)"},
+                            {dateval: "Wed Mar 03 2013 00:00:00 GMT+0530 (India Standard Time)"},
+                            {dateval: "Wed Mar 03 2015 00:00:00 GMT+0530 (India Standard Time)"}
+                        ]
+             var dateFormat  = new Date()
+             var dateFormat = new Date(2018,07,28) // yyyy , mm , dd
+             //Date(year , month , day , hours , minutes , seconds , milliseconds)
+             var dateFormat= new Date(2018, 07 , 28 , 07 , 30 , 45 , 0)
+             var dateFormat = new Date(2019, 11)
+             var dateFormat = new Date("October 13, 2011 12:00:00")
+             var dateFormat= new Date(100)
+             var dateFormat= new Date("2015-12-12") 
+             var dateFormat= new Date("03/25/2020")
+             var dateFormat= new Date("03 Mar 2010") // DD MMM YYYY
+             console.log("date default: ",dateFormat) 
+             var booleanValue = true
+             var condVal = 25
+             var condVal2 = 75
+             if (condVal == 25){
+                 console.log("value is 25 ")
+             } else{
+                 console.log("not 25")
+             }
+             // else if ladder
+             if(condVal == 24){
+                 console.log("else if ladder")
+                 console.log("value is 25")
+             } else if(condVal2 == 75){
+                 console.log("value is 75")
+             }
+             console.log(new Date().getDay()) 
+             // 0 is sunday
+             // 1 is Monday 
+             switch (8){
+                 case 0: 
+                    today = "sunday";
+                    console.log(today)
+                    break;
+                 case 1: 
+                    today = "monday";
+                    console.log(today)
+                    break;
+                 default: 
+                    today = "not mentioned"
+                    console.log(today)
+                    break;
+             }
+             // for loop
+             obj = [
+                    {ename: "ram" , eno : "201" },
+                    {ename: "Rushi" , eno : "215" }
+             ]
+             for(let i = 0 ; i < obj.length ; i++){
+                console.log(obj[i])
+             }
+             // while
+             var i = 0
+             while(i < 5){
+                 word = "Newyork City pin is " + i 
+                 console.log(word)
+                 i++
+             }
+             // bitwise operators & bitwise and , bitwise or , bitwise Xor
+             console.log( 0 & 0 )  // 0000 & 0000
+             console.log( 0 & 1 ) 
+             console.log( 1 & 0 )
+             console.log( 1 & 1 )  
+             // or 
+             console.log( 0 | 0 )  // 0000 & 0000
+             console.log( 0 | 1 ) 
+             console.log( 1 | 0 )
+             console.log( 1 | 1 )  
+             // Xor 
+             console.log( 0 ^ 0 )  
+             console.log( 0 ^ 1 ) 
+             console.log( 1 ^ 0 )
+             console.log( 1 ^ 1 )  
+
+             //console.log(hoist)
+             //hoist = "varible is hoisted"
+             var c // decalaration
+             c = 8 // Assign 8 to x
+             console.log(c) // display 
+
+             // function hoisting
+             function add(x , y){
+                 x = x + y 
+                 return x
+             }
+
+             var address = add(3,4)
+             console.log(address)
+
+
             </script>
-
             <button onclick="dataTypes()" >Data types</button>
-
+            <p id="arr"></p>
 
     </body>
 </html>
