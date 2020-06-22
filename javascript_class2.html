@@ -259,11 +259,98 @@
                  x = x + y 
                  return x
              }
-
+             
              var address = add(3,4)
              console.log(address)
 
+             // this keyword - specifies current function , used to call a function , 
+             // decalares variable as global object 
+             var x = this 
+             console.log("this value ", x.arrCities)
+             var objEmployee = {
+                 firstName: "Ram",
+                 lastName : "Rajesh",
+                 ename : function(){ return this.firstName + " "+ this.lastName},
+                 eno : 215,
+                 esalary : 25000,
+             }
+             console.log("ename", this.objEmployee.ename())
 
+             // let - block scoped element 
+             {
+                let y = 45
+                    {
+                        let y = 7
+                        console.log('let y',y) // 7
+                    }
+                console.log('let y',y) // 45
+             }
+             // console.log('let y',y) // undefined 
+
+             // const 
+             const pi = 3.14
+             console.log("const pi", pi)
+             //pi = 2.7 
+             //console.log("const pi", pi) // type error , const is assigned with other value 
+
+             {
+                const o = 88
+                 {
+                     const p = 89
+                     console.log("block scoped const", p) 
+                     console.log("block scoped const below", o)
+                 } // scope of p is ended 
+                     console.log("block scoped const below", o)
+             } // scope of o is ended here
+             
+             //es5 
+             function add(){
+                 a = 5 
+                 b = 6   
+                 return a + b 
+            }
+            var add = add()
+            console.log("normal function ", add)
+            // es6 - arrow function 
+            add = (a , b) => {
+                x = 7 
+                return a + this.x
+            }
+            console.log("arrow func ", this.add(3 ,4))
+
+            // class is introduced in es6 
+            // constructor initialize parameters 
+            class Box{
+                constructor(boxname){
+                    this.bname = boxname
+                }
+
+                boxname(){
+                    return this.bname
+                }
+            }
+            // extends is used to extend properties of class
+            class BoxExtd extends Box{
+                // from instance we will get Alpha , square 
+                constructor(boxname, model){
+                    super(boxname) // refer to parent class 
+                    this.modelbox = model // square
+                }
+                showBox(){
+                    return this.boxname() + " is a "+ this.modelbox
+                }                
+            }
+            // create instance for class
+            myBox = new BoxExtd("Alpha","Square")    
+            console.log(myBox.showBox()) 
+            console.log(myBox.boxname())
+
+            /* Assignment - 
+                arrow function and call with some parameters ,
+                implement class and extends class - inheritance method
+                call a function with this keyword 
+                make an example of const with block scope 
+            */
             </script>
             <button onclick="dataTypes()" >Data types</button>
             <p id="arr"></p>
