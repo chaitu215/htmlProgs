@@ -278,12 +278,13 @@
 
              // let - block scoped element 
              {
-                let y = 45
+                let x = 45
                     {
                         let y = 7
                         console.log('let y',y) // 7
+                        console.log('let x',x) // 7
                     }
-                console.log('let y',y) // 45
+                console.log('let x',x) // 45
              }
              // console.log('let y',y) // undefined 
 
@@ -351,7 +352,82 @@
                 call a function with this keyword 
                 make an example of const with block scope 
             */
+            function validateForm(){
+                console.log("data")
+                var x = document.forms["myForm"]["fname"].value;
+                console.log(x)
+                if(x == ""){
+                    alert("name must be specified")
+                }
+                return true
+            }
+
+            var emp = 
+                [
+                {
+                    name : "Tom", age : 55 , city :"New york"
+                }
+                ,
+                {
+                    name : "Ram", age : 50 , city :"Delhi"
+                }
+                ]
+            console.log(Object.values(emp))
+            console.log(Object.keys(emp))
+            console.log(JSON.stringify(emp))
+            
+            var ageArr = []
+            for(var i in emp){
+                console.log(emp[i])
+                //var ageArr = [] // 55 is replaced wit [] 
+                // console.log(emp[i].name == "Tom")
+                if(emp[i].name == "Tom" || emp[i].name == "Ram") {
+                    console.log("age : ", emp[i].age)
+                    ageArr.push(emp[i].age)
+                    
+                }
+            }
+            console.log("age Arr",ageArr)
+
+            // call 
+            var emp = {
+                fullName: function(city , country){
+                    return this.firstName + " "+ this.lastName + " "+
+                            city + " "+ country
+                }
+            }
+            var emp_01 = 
+            [
+                {
+                firstName : "Joe",
+                lastName : "Chris"
+                },
+                {
+                firstName : "Jacob",
+                lastName : "Randy"
+                }
+            ]
+            var emp_02 = {
+                firstName : "Joe",
+                lastName : "Chris"
+            }
+            //console.log(emp.fullName)
+            console.log(emp.fullName.call(emp_02, "New york" , "USA"))
+            console.log(emp.fullName.apply(emp_02, ["New york" , "USA"]))
+            for(var i in emp_01){
+                console.log(emp.fullName.call(emp_01[i], "New york", "Norway"))
+            }
+            for(var i in emp_01){
+                console.log(emp.fullName.apply(emp_01[i], ["New york", "Norway"]))
+            }
+            
+
             </script>
+            <!-- form -->
+            <form name="myForm" onsubmit="validateForm()" />
+                Name : <input type="text" name="fname"/>
+                <input type="submit" value="Submit" >
+            </form>
             <button onclick="dataTypes()" >Data types</button>
             <p id="arr"></p>
 
